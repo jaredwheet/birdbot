@@ -1,0 +1,25 @@
+{
+  "name": "birdbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredwheet/birdbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaredwheet/birdbot/issues"
+  },
+  "homepage": "https://github.com/jaredwheet/birdbot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "moment": "^2.29.1",
+    "twitter": "^1.7.1"
+  }
+}
