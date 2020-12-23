@@ -1,0 +1,23 @@
+name: CI Build
+
+on:
+  schedule:
+    - cron: 0 12 * * *
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+        env:
+          CONSUMER_KEY=${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET=${{ secrets.CONSUMER_SECRET }}
+          ACCESS_TOKEN_KEY=${{ secrets.ACCESS_TOKEN_KEY }}
+          ACCESS_TOKEN_SECRET=${{ secrets.ACCESS_TOKEN_SECRET }} 
+        run: console.log(${CONSUMER_KEY}
+      - name: Run a multi-line script
+        run: |
+          ls
+          git status
