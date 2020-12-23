@@ -14,7 +14,7 @@ jobs:
       - name: Run a one-line script
         env:
           FIRST_NAME: { { secrets.CONSUMER_KEY } }
-          middle_name: The
+          middle_name: Thhe
           Last_Name: Octocat
           API_KEY: ${{ secrets.CONSUMER_KEY }}
         run: echo $API_KEY
