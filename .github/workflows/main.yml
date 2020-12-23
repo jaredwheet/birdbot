@@ -12,17 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Run a one-line script
-      - shell: bash
-        env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: example-command "$SUPER_SECRET"
-        # env:
-        #   API_KEY: "1234"
+         env:
+          API_KEY: ${{ secrets.API_KEY }}
         # env: CONSUMER_KEY=${{ secrets.CONSUMER_KEY }}
         #   CONSUMER_SECRET=${{ secrets.CONSUMER_SECRET }}
         #   ACCESS_TOKEN_KEY=${{ secrets.ACCESS_TOKEN_KEY }}
         #   ACCESS_TOKEN_SECRET=${{ secrets.ACCESS_TOKEN_SECRET }}
-        # run: console.log(API_KEY)
+        run: pwd
       - name: Run a multi-line script
         run: |
           ls
