@@ -10,16 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Run a one-line script
-         env:
-          API_KEY: ${{ secrets.API_KEY }}
-        # env: CONSUMER_KEY=${{ secrets.CONSUMER_KEY }}
-        #   CONSUMER_SECRET=${{ secrets.CONSUMER_SECRET }}
-        #   ACCESS_TOKEN_KEY=${{ secrets.ACCESS_TOKEN_KEY }}
-        #   ACCESS_TOKEN_SECRET=${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: pwd
-      - name: Run a multi-line script
-        run: |
-          ls
-          git status
+  - name: Hello world
+    run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
+    env:
+      FIRST_NAME: Mona
+      middle_name: The
+      Last_Name: Octocat
