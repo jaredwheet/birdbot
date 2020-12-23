@@ -16,7 +16,8 @@ jobs:
           FIRST_NAME: { { secrets.CONSUMER_KEY } }
           middle_name: The
           Last_Name: Octocat
-        run: echo ${FIRST_NAME}
+          API_KEY: ${{ secrets.CONSUMER_KEY }}
+        run: echo $API_KEY
       - name: Run a multi-line script
         run: |
           ls
