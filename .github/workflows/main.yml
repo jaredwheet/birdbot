@@ -1,14 +1,9 @@
 name: CI Build
-
-on:
-  [push]
-  # schedule:
-  #   - cron: 0 12 * * *
-
+"on":
+  - push
 jobs:
   build:
     runs-on: ubuntu-latest
-
   steps:
     - name: Hello world
       run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
