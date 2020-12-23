@@ -41,6 +41,8 @@ client.post(
     status: `${elapsedDays} days
 
 ${elapsedYears}
+
+@KyleBrennanISU @Redbird_MBB @DanMuller @ISURedbirds
 `,
   },
   function (error, tweet, response) {
