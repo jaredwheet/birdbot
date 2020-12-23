@@ -35,17 +35,27 @@ console.log(elapsedYears);
 elapsedDays = thousands_separators(elapsedDays);
 console.log(elapsedDays);
 
-client.post(
-  "statuses/update",
-  {
-    status: `${elapsedDays} days
+// client.post(
+//   "statuses/update",
+//   {
+//     status: `${elapsedDays} days
 
-${elapsedYears}
-`,
-  },
-  function (error, tweet, response) {
+// ${elapsedYears}
+// `,
+//   },
+//   function (error, tweet, response) {
+//     if (!error) {
+//       console.log(tweet);
+//     }
+//   }
+// );
+
+client.get(
+  "statuses/user_timeline",
+  params,
+  function (error, tweets, response) {
     if (!error) {
-      console.log(tweet);
+      console.log(tweets);
     }
   }
 );

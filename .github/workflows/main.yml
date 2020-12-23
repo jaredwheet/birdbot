@@ -2,22 +2,23 @@ name: CI Build
 
 on:
   schedule:
-    - cron: 0 12 * * *
-    
+    # * is a special character in YAML so you have to quote this string
+    - cron: "*/5 * * * *"
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
-      - name: Run a one-line script
+      - name: Get twitter status every minute
         env:
-          CONSUMER_KEY=${{ secrets.CONSUMER_KEY }}
-          CONSUMER_SECRET=${{ secrets.CONSUMER_SECRET }}
-          ACCESS_TOKEN_KEY=${{ secrets.ACCESS_TOKEN_KEY }}
-          ACCESS_TOKEN_SECRET=${{ secrets.ACCESS_TOKEN_SECRET }} 
-        run: console.log(${CONSUMER_KEY}
-      - name: Run a multi-line script
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: |
           ls
           git status
+          npm install
+          node index.js
