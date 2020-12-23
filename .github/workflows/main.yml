@@ -16,7 +16,7 @@ jobs:
         #   CONSUMER_SECRET=${{ secrets.CONSUMER_SECRET }}
         #   ACCESS_TOKEN_KEY=${{ secrets.ACCESS_TOKEN_KEY }}
         #   ACCESS_TOKEN_SECRET=${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: console.log("HELLO!"}
+        run: console.log("HELLO!")
       - name: Run a multi-line script
         run: |
           ls
