@@ -13,10 +13,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run a one-line script
         env:
-          middle_name: Thhe
-          Last_Name: Octocat
-          API_KEY: ${{ secrets.CONSUMER_KEY }}
-        run: echo $API_KEY
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          ACCESS_TOKEN_KEY: ${{ secrets.ACCESS_TOKEN_KEY }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+        run: pwd
       - name: Run a multi-line script
         run: |
           ls
