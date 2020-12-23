@@ -29,7 +29,7 @@ lastNCAAGame.add(months, "months");
 
 const days = current_date.diff(lastNCAAGame, "days");
 
-let elapsedYears = years + " years " + months + " months " + days + " days";
+let elapsedYears = years + " years, " + months + " months, " + days + " days";
 
 console.log(elapsedYears);
 elapsedDays = thousands_separators(elapsedDays);
