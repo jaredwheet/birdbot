@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Run a one-line script
-         env:
+        env:
           API_KEY: "1234"
         # env: CONSUMER_KEY=${{ secrets.CONSUMER_KEY }}
         #   CONSUMER_SECRET=${{ secrets.CONSUMER_SECRET }}
