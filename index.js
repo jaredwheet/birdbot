@@ -1,4 +1,4 @@
-let Twitter = require("twitter");
+const Twitter = require("twitter");
 require("dotenv").config();
 let moment = require("moment");
 
