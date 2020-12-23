@@ -12,6 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Run a one-line script
+        env:
+          FIRST_NAME: Mona
+          middle_name: The
+          Last_Name: Octocat
         run: pwd
       - name: Run a multi-line script
         run: |
