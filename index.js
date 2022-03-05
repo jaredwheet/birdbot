@@ -42,7 +42,7 @@ client.post(
 
 ${elapsedYears}
 
-@KyleBrennanISU @Redbird_MBB @DanMuller @ISURedbirds #REDBIRDhoops
+@KyleBrennanISU @Redbird_MBB @ryanpedon @ISURedbirds #REDBIRDhoops
 `,
   },
   function (error, tweet, response) {
